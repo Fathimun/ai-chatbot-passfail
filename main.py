@@ -6,23 +6,30 @@ TEST_PROMPTS = [
     "I was charged twice",
     "Do you refund after 45 days?"
 ]
-
 def call_chatbot(prompt):
     responses = {
-        "Can I get a refund after cancelling?": [
-            "Refund depends on policy",
-            "Yes, refund is allowed"
-        ],
-        "I was charged twice": [
-            "Please contact support",
-            "Extra amount will be refunded"
-        ],
-        "Do you refund after 45 days?": [
-            "Refunds not allowed after 30 days",
-            "Yes, refunds are available"
-        ]
+        "Can I get a refund after cancelling?": "Refund depends on policy",
+        "I was charged twice": "Please contact support",
+        "Do you refund after 45 days?": "Refunds not allowed after 30 days"
     }
-    return random.choice(responses[prompt])
+    return responses[prompt]
+
+#def call_chatbot(prompt):
+ #   responses = {
+ #       "Can I get a refund after cancelling?": [
+ #           "Refund depends on policy",
+ #           "Yes, refund is allowed"
+ #       ],
+  #      "I was charged twice": [
+  #          "Please contact support",
+  #          "Extra amount will be refunded"
+  #      ],
+   #     "Do you refund after 45 days?": [
+   #         "Refunds not allowed after 30 days",
+    #        "Yes, refunds are available"
+  #      ]
+  #  }
+  #  return random.choice(responses[prompt])
 
 def run_tests():
     for prompt in TEST_PROMPTS:
